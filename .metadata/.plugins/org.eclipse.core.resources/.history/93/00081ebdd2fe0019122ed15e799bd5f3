@@ -1,0 +1,8 @@
+package Dao;
+
+import Model.todo;
+
+public interface todoDao {
+	public int insertTodo(todo todo);
+	public int updateTodo(int seq, int type);
+}

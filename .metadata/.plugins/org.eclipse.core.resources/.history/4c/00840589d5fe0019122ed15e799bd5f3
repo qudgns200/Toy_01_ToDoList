@@ -1,0 +1,12 @@
+package Service;
+
+import java.util.HashMap;
+
+import Model.todo;
+
+public interface todoService {
+	
+	public int insertTodo(todo todo);
+	public int updateTodo(HashMap<String, Integer> map);
+	public todo selectAll();
+}

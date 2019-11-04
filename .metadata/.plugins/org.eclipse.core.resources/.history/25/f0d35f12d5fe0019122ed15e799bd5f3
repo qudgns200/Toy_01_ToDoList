@@ -1,0 +1,6 @@
+package Service;
+
+public interface todoService {
+	
+	public int insertTodo(todo todo);
+}

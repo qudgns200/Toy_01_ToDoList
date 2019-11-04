@@ -1,0 +1,45 @@
+package Controller;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import Model.todo;
+import Service.todoService;
+
+@Controller
+public class todoController {
+	
+	private todoService todoService;
+
+	@RequestMapping("mainForm.do")
+	public ModelAndView mainForm() {
+		ModelAndView mav = new ModelAndView();
+		List<todo> list = new ArrayList<todo>();
+		list = todoService.selectAll();
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("list", list);
+		mav.addAllObjects(map);
+		mav.setViewName("mainForm");
+		return mav;
+	}
+	
+	@RequestMapping("writeForm.do")
+	public String writeForm() {
+		return "writeForm";
+	}
+	
+	@RequestMapping("write.do")
+	public String write(HttpServletRequest req) {
+		todo todo = new todo();
+		todo.setTitle(req.getParameter("title"));
+		todo.setContent(req.getParameter("content"));
+		todo.setPriority(Boolean.parseBoolean(req.getParameter("priority")));
+		
+		todoService.insertTodo(todo);
+	}
+}

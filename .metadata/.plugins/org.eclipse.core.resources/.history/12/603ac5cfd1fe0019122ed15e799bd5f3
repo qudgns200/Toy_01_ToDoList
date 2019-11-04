@@ -1,0 +1,10 @@
+package Model;
+
+public class todo {
+	private int seq;
+	private String title;
+	private String content;
+	private Date date;
+	private boolean priority;
+	private int type;
+}
