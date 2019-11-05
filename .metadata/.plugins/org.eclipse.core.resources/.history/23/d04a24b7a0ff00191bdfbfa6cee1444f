@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>To-DO List</title>
+<link href="css/custom.css" rel="stylesheet"/>
+</head>
+<body>
+	<header>
+    	<a href="#" class="button" id="btnAdd">Link Button</a>
+    </header>
+    <section>
+      <div id="todo">
+        <ul>
+          <li>
+            <a href="#">
+              <h2>Title #1</h2>
+              <p>Text Content #1</p>
+              <button>예제1</button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>Title #2</h2>
+              <p>Text Content #2</p>
+              <button>예제2</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="doing">
+        <ul>
+          <li>
+            <a href="#">
+              <h2>Title #1</h2>
+              <p>Text Content #1</p>
+              <button>예제3</button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>Title #2</h2>
+              <p>Text Content #2</p>
+              <button>예제4</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="done">
+        <ul>
+          <li>
+            <a href="#">
+              <h2>Title #5</h2>
+              <p>Text Content #1</p>
+              <button>예제5</button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>Title #6</h2>
+              <p>Text Content #2</p>
+              <button>예제6</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+</body>
+</html>
