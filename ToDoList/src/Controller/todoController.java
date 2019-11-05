@@ -24,9 +24,7 @@ public class todoController {
 		ModelAndView mav = new ModelAndView();
 		List<todo> list = new ArrayList<todo>();
 		list = todoService.selectAll();
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("list", list);
-		mav.addAllObjects(map);
+		mav.addObject("list", list);
 		mav.setViewName("mainForm");
 		return mav;
 	}

@@ -5,16 +5,16 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-11-05T05:28:21Z</updated>
+  <updated>2019-11-05T05:28:00Z</updated>
   <entry>
-    <title>Spring Data Moore SR1 and Lovelace SR12 released.</title>
+    <title>Spring Data Moore SR1 and Lovelace SR12 released</title>
     <link rel="alternate" href="https://spring.io/blog/2019/11/05/spring-data-moore-sr1-and-lovelace-sr12-released" />
     <category term="releases" label="Releases" />
     <author>
       <name>Jens Schauder</name>
     </author>
     <id>tag:spring.io,2019-11-04:3859</id>
-    <updated>2019-11-05T05:28:21Z</updated>
+    <updated>2019-11-05T05:28:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the team, I¡¯m pleased to announce Spring Data releases Moore SR1, and Lovelace SR12. All releases pick up the most recent Spring Framework releases and will be picked up by Spring Boot 2.2.1, and 2.1.10 respectively.&lt;/p&gt;&lt;h2&gt;&lt;a href="#moore-sr1" class="anchor" name="moore-sr1"&gt;&lt;/a&gt;Moore SR1&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Spring Data Commons 2.2.1 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/2.2.1.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.2.1.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.2.1.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/2.2.1.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
