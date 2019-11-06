@@ -8,36 +8,65 @@
 <meta name="viewport" content="width=device-width">
 <title>To-DO List</title>
 <link href="css/custom.css" rel="stylesheet"/>
+
+<script type="text/javascript">
+	<!-- Todo 이동 클릭 시 실행 함수 -->
+	function move(type, seq) {
+		var map = {
+			type : type,
+			seq : seq
+		};
+		location.href="move.do?type=" + type + "&seq=" + seq;
+	}
+	<!-- ---------------------->
+</script>
+
 </head>
 <body>
 	<header>
-    	<a href="writeForm.do" class="button" id="btnAdd">Link Button</a>
+    	<a href="writeForm.do" class="button" id="btnAdd">Todo 추가</a>
     </header>
     
     <section>
       <div id="todo">
         <ul>
-	    	<li>
-	    	<c:forEach var="list" items="${list }">
+	    	<c:forEach var="arr1" items="${arr1 }">
+	    	  <li>
 	        	<a href="#">
-	            	<h2>${list.title }</h2>
-	            	<p>${list.content }</p>
-	            	<button>예제1</button>
+	            	<h2>${arr1.title }</h2>
+	            	<p>${arr1.content }</p>
+	            	<button class="button" onclick="move(${arr1.type }, ${arr1.seq })"></button>
 	            </a>
+	          </li>    
 	        </c:forEach>
-	        </li>
         </ul>
       </div>
 
       <div id="doing">
         <ul>
-          
+          <c:forEach var="arr2" items="${arr2 }">
+	    	  <li>
+	        	<a href="#">
+	            	<h2>${arr2.title }</h2>
+	            	<p>${arr2.content }</p>
+	            	<button class="button" onclick="move(${arr2.type }, ${arr2.seq })"></button>
+	            </a>
+	          </li>    
+	        </c:forEach>
         </ul>
       </div>
 
       <div id="done">
         <ul>
-          
+          <c:forEach var="arr3" items="${arr3 }">
+	    	  <li>
+	        	<a href="#">
+	            	<h2>${arr3.title }</h2>
+	            	<p>${arr3.content }</p>
+	            	<button class="button" onclick="move(${arr3.type }, ${arr3.seq })"></button>
+	            </a>
+	          </li>    
+	        </c:forEach>
         </ul>
       </div>
     </section>

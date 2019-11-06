@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>To-DO List</title>
+<link href="css/custom.css" rel="stylesheet"/>
+
+<script type="text/javascript">
+	<!-- Todo 이동 클릭 시 실행 함수 -->
+	function move(type, seq) {
+		var type = type;
+		var seq = seq;
+	}
+	<!-- ---------------------->
+</script>
+
+</head>
+<body>
+	<header>
+    	<a href="writeForm.do" class="button" id="btnAdd">Todo 추가</a>
+    </header>
+    
+    <section>
+      <div id="todo">
+        <ul>
+	    	<c:forEach var="arr1" items="${arr1 }">
+	    	  <li>
+	        	<a href="#">
+	            	<h2>${arr1.title }</h2>
+	            	<p>${arr1.content }</p>
+	            	<button class="button" onclick="move()"></button>
+	            </a>
+	          </li>    
+	        </c:forEach>
+        </ul>
+      </div>
+
+      <div id="doing">
+        <ul>
+          <c:forEach var="arr2" items="${arr2 }">
+	    	  <li>
+	        	<a href="#">
+	            	<h2>${arr2.title }</h2>
+	            	<p>${arr2.content }</p>
+	            	<button class="button" onclick="move()"></button>
+	            </a>
+	          </li>    
+	        </c:forEach>
+        </ul>
+      </div>
+
+      <div id="done">
+        <ul>
+          <c:forEach var="arr3" items="${arr3 }">
+	    	  <li>
+	        	<a href="#">
+	            	<h2>${arr3.title }</h2>
+	            	<p>${arr3.content }</p>
+	            	<button class="button" onclick="move()"></button>
+	            </a>
+	          </li>    
+	        </c:forEach>
+        </ul>
+      </div>
+    </section>
+</body>
+</html>

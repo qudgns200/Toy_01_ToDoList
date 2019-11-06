@@ -24,7 +24,23 @@ public class todoController {
 		ModelAndView mav = new ModelAndView();
 		List<todo> list = new ArrayList<todo>();
 		list = todoService.selectAll();
-		mav.addObject("list", list);
+		
+		List<todo> arr1 = new ArrayList<todo>();
+		List<todo> arr2 = new ArrayList<todo>();
+		List<todo> arr3 = new ArrayList<todo>();
+		
+		for(int i=0; i<list.size(); i++) {
+			if(list.get(i).getType()==1) {
+				arr1.add(list.get(i));
+			} else if(list.get(i).getType()==2) {
+				arr2.add(list.get(i));
+			} else {
+				arr3.add(list.get(i));
+			}
+		}
+		mav.addObject("arr1", arr1);
+		mav.addObject("arr2", arr2);
+		mav.addObject("arr3", arr3);
 		mav.setViewName("mainForm");
 		return mav;
 	}
@@ -36,21 +52,26 @@ public class todoController {
 	
 	@RequestMapping("write.do")
 	public String write(HttpServletRequest req) {
-		todo todo = new todo();
-		todo.setTitle(req.getParameter("title"));
-		todo.setContent(req.getParameter("content"));
-		todo.setPriority(Boolean.parseBoolean(req.getParameter("priority")));
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("title", req.getParameter("title"));
+		map.put("content", req.getParameter("content"));
 		
-		todoService.insertTodo(todo);
+		if(req.getParameter("priority")==null) map.put("priority", "1");
+		else map.put("priority", "0");
+		
+		todoService.insertTodo(map);
 		
 		return "redirect:mainForm.do";
 	}
 	
 	@RequestMapping("move.do")
-	public String move(HttpServletRequest req) {
+	public String move(int type, int seq) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		map.put("type", Integer.parseInt(req.getParameter("type")));
-		map.put("seq", Integer.parseInt(req.getParameter("seq")));
+		
+		if(type!=3) type++;
+		
+		map.put("type", type);
+		map.put("seq", seq);
 		
 		todoService.updateTodo(map);
 		

@@ -34,6 +34,17 @@ ul li{
   float:left;
 }
 
+a button {
+    width:20px;
+    background-color: #f8585b;
+    border: none;
+    color:#fff;
+    padding: 5px 0;
+    margin: 4px;
+    cursor: pointer;
+    margin-top: 7em;
+}
+
 #btnAdd {
   background-color: #4CAF50;
   border: none;

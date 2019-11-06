@@ -15,9 +15,9 @@ public class todoServiceImpl implements todoService {
 	private todoDao todoDao;
 	
 	@Override
-	public int insertTodo(todo todo) {
+	public int insertTodo(HashMap<String, String> map) {
 		// TODO Auto-generated method stub
-		return todoDao.insertTodo(todo);
+		return todoDao.insertTodo(map);
 	}
 
 	@Override
