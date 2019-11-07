@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--  Bootstrap -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!--  --------- -->
+</head>
+<body>
+	< h1>To-Do list 작성
+	</h1>
+	<form method="post" action="write.do">
+		<h3>
+			<span class="label label-default">Title</span> <span><input
+				type="text" name="title" id="title" /></span>
+		</h3>
+
+		<label>Content</label> <input type="text" name="content" id="content" />
+
+		<label>Priority</label> <input type="checkbox" name="priority"
+			id="priority" checked /> <label for="priority" id="laberP">우선순위</label>
+		<br>
+
+		<button type="submit">Add</button>
+
+		<div class="spacer"></div>
+	</form>
+
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

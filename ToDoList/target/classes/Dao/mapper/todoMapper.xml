@@ -15,6 +15,7 @@
   	</update>
   	
   	<select id="selectAll" resultType="todo">
-  		select * from todo;
+  		select * from todo
+  		order by priority, date;
   	</select>
   </mapper>
